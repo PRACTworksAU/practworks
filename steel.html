@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Metal Weight Calculator - TradeCalc</title>
+
+    <meta name="description"
+        content="Calculate the approximate weight of steel, stainless steel, aluminium and other metal sheet and plate materials.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <div class="container">
+
+            <div class="header-content">
+
+                <div class="logo">
+                    Trade<span>Calc</span>
+                </div>
+
+                <div class="tagline">
+                    Trade, fabrication & DIY calculators
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Navigation -->
+
+    <nav>
+        <div class="container">
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+                <a href="length.html">Length</a>
+                <a href="weight.html">Weight</a>
+                <a href="steel.html">Steel & Metal</a>
+                <a href="#">Pressure</a>
+                <a href="#">Power</a>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+
+    <main>
+
+        <div class="container">
+
+            <div class="welcome">
+
+                <h2>Metal Weight Calculator</h2>
+
+                <p>
+                    Calculate the approximate weight of metal sheet and plate
+                    using length, width, thickness and material.
+                </p>
+
+            </div>
+
+
+            <!-- Calculator -->
+
+            <div class="calculator">
+
+                <h2>Sheet & Plate Weight Calculator</h2>
+
+                <p>
+                    Enter the dimensions below to calculate the approximate
+                    weight of your material.
+                </p>
+
+                <hr>
+
+
+                <!-- Material -->
+
+                <label for="material">
+                    <strong>Material</strong>
+                </label>
+
+                <br>
+
+                <select id="material">
+
+                    <option value="7850">
+                        Standard Mild / Carbon Steel
+                    </option>
+
+                    <option value="7850">
+                        Cold Rolled Steel
+                    </option>
+
+                    <option value="7850">
+                        Hot Rolled Steel
+                    </option>
+
+                    <option value="7850">
+                        Galvanised Steel
+                    </option>
+
+                    <option value="8000">
+                        Stainless Steel (approx.)
+                    </option>
+
+                    <option value="2700">
+                        Aluminium (approx.)
+                    </option>
+
+                </select>
+
+                <!-- Shape -->
+
+                <br>
+
+                <label for="shape">
+                    <strong>Shape</strong>
+                </label>
+
+                <br>
+
+                <select id="shape" onchange="updateSteelShape()">
+
+                    <option value="sheet">
+                        Sheet / Plate
+                    </option>
+
+                    <option value="flatbar">
+                        Flat Bar
+                    </option>
+
+                    <option value="roundbar">
+                        Round Bar
+                    </option>
+
+                    <option value="squarebar">
+                        Square Bar
+                    </option>
+
+                    <option value="rhs">
+                        RHS
+                    </option>
+
+                    <option value="shs">
+                        SHS
+                    </option>
+
+                    <option value="pipe">
+                        Pipe
+                    </option>
+
+                    <option value="angle">
+                        Angle
+                    </option>
+
+                </select>
+
+                <br>
+
+                <!-- Dimensions -->
+
+                <div id="dimensions">
+
+                    <!-- Length -->
+
+                    <label for="steelLength">
+                        <strong>Length (mm)</strong>
+                    </label>
+
+                    <br>
+
+                    <input
+                        type="number"
+                        id="steelLength"
+                        placeholder="e.g. 3000"
+                    >
+
+                    <br>
+
+
+                    <!-- Width -->
+
+                    <label for="steelWidth">
+                        <strong>Width (mm)</strong>
+                    </label>
+
+                    <br>
+
+                    <input
+                        type="number"
+                        id="steelWidth"
+                        placeholder="e.g. 1500"
+                    >
+
+                    <br>
+
+
+                    <!-- Thickness -->
+
+                    <label for="steelThickness">
+                        <strong>Thickness (mm)</strong>
+                    </label>
+
+                    <br>
+
+                    <input
+                        type="number"
+                        id="steelThickness"
+                        placeholder="e.g. 1.6"
+                    >
+
+                </div>
+
+                <br>
+
+
+                <button onclick="calculateSteelWeight()">
+                    Calculate Weight
+                </button>
+
+
+                <div
+                    id="steelResult"
+                    class="result">
+                </div>
+
+            </div>
+
+
+                        <!-- Calculator Information -->
+
+            <div class="calculator">
+
+                <h2>About the Metal Weight Calculator</h2>
+
+                <p>
+                    This calculator estimates the weight of common metal shapes
+                    using the dimensions you enter and an approximate material density.
+                </p>
+
+
+                <hr>
+
+
+                <h3>How the calculation works</h3>
+
+                <p>
+                    The basic calculation is:
+                </p>
+
+                <p>
+                    <strong>Weight = Volume × Material Density</strong>
+                </p>
+
+                <p>
+                    Dimensions are entered in millimetres and converted to metres
+                    before the calculation is performed.
+                </p>
+
+
+                <h3>Steel Density</h3>
+
+                <p>
+                    Standard mild and carbon steel, including typical hot rolled
+                    and cold rolled products, are calculated using an approximate
+                    density of <strong>7,850 kg/m³</strong>.
+                </p>
+
+
+                <h3>Galvanised Steel</h3>
+
+                <p>
+                    Galvanised steel has a zinc coating applied to the steel.
+                    The amount of zinc can vary depending on the coating
+                    specification, so the current calculator uses the underlying
+                    steel density and treats the result as an approximation.
+                </p>
+
+
+                <h3>Stainless Steel</h3>
+
+                <p>
+                    Stainless steel is available in many different grades with
+                    different densities. TradeCalc therefore uses an approximate
+                    density rather than attempting to represent every grade.
+                </p>
+
+
+                <h3>Aluminium</h3>
+
+                <p>
+                    Aluminium is considerably lighter than steel. The calculator
+                    uses an approximate density of <strong>2,700 kg/m³</strong>.
+                </p>
+
+
+                <h3>Important Information</h3>
+
+                <p>
+                    Actual supplied weights can vary due to material grade,
+                    manufacturing tolerances, section dimensions, corner radii,
+                    coatings and other manufacturing factors.
+                </p>
+
+                <p>
+                    For purchasing, engineering or structural applications,
+                    always check the manufacturer's published specifications
+                    when an exact weight is required.
+                </p>
+
+            </div>
+
+
+            <!-- Back Link -->
+
+            <p>
+                <a href="index.html">
+                    ← Back to TradeCalc
+                </a>
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 TradeCalc — Free trade, fabrication & DIY calculators
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

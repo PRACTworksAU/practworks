@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TradeCalc - Free Trade & DIY Calculators</title>
+
+    <meta
+        name="description"
+        content="Free calculators for trades, fabrication, construction and DIY."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+        <div class="header-content">
+
+            <div class="logo">
+                Trade<span>Calc</span>
+            </div>
+
+            <div class="tagline">
+                Trade, fabrication & DIY calculators
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav>
+
+    <div class="container">
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="length.html">Length</a>
+
+            <a href="#">Weight</a>
+
+            <a href="#">Steel & Metal</a>
+
+            <a href="#">Pressure</a>
+
+            <a href="#">Power</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+
+    <section class="welcome">
+
+        <h2>What do you need to calculate?</h2>
+
+        <p>
+            Select a category below to find the calculator you need.
+        </p>
+
+    </section>
+
+
+    <section class="category-grid">
+
+
+        <div class="category-card">
+
+            <div class="category-icon">📏</div>
+
+            <h3>Length</h3>
+
+            <p>
+                Convert measurements between metric and imperial units.
+            </p>
+
+            <button onclick="window.location.href='length.html'">
+                View Calculators
+            </button>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <div class="category-icon">⚖️</div>
+
+            <h3>Weight</h3>
+
+            <p>
+                Convert kilograms, pounds and other weight measurements.
+            </p>
+
+            <button onclick="window.location.href='weight.html'">
+                View Calculators
+            </button>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <div class="category-icon">🔩</div>
+
+            <h3>Steel & Metal</h3>
+
+            <p>
+                Calculate the weight of sheet, plate, bar and other metals.
+            </p>
+
+            <button onclick="window.location.href='steel.html'">
+                View Calculators
+            </button>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <div class="category-icon">🔥</div>
+
+            <h3>Pressure</h3>
+
+            <p>
+                Convert PSI, bar, kPa and other pressure measurements.
+            </p>
+
+            <button>
+                View Calculators
+            </button>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <div class="category-icon">⚡</div>
+
+            <h3>Power</h3>
+
+            <p>
+                Convert kW, horsepower and other power measurements.
+            </p>
+
+            <button>
+                View Calculators
+            </button>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <div class="category-icon">🏗️</div>
+
+            <h3>Construction</h3>
+
+            <p>
+                Useful calculators for construction and DIY projects.
+            </p>
+
+            <button>
+                View Calculators
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+    <section class="calculator">
+
+        <h2>Quick Calculator</h2>
+
+        <p>
+            Millimetres ↔ Inches
+        </p>
+
+
+        <label for="millimetres">
+            Millimetres:
+        </label>
+
+        <br>
+
+        <input
+            type="number"
+            id="millimetres"
+            placeholder="Enter millimetres"
+        >
+
+        <button onclick="convertToInches()">
+            Convert to Inches
+        </button>
+
+        <p id="inchResult" class="result"></p>
+
+
+        <hr>
+
+
+        <label for="inches">
+            Inches:
+        </label>
+
+        <br>
+
+        <input
+            type="number"
+            id="inches"
+            placeholder="Enter inches"
+        >
+
+        <button onclick="convertToMillimetres()">
+            Convert to Millimetres
+        </button>
+
+        <p id="millimetreResult" class="result"></p>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 TradeCalc — Free calculators for trades and DIY.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

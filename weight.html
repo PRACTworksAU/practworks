@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Weight Calculators - TradeCalc</title>
+
+    <meta
+        name="description"
+        content="Free weight conversion calculators for kilograms, pounds, grams and ounces."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+        <div class="header-content">
+
+            <div class="logo">
+                Trade<span>Calc</span>
+            </div>
+
+            <div class="tagline">
+                Trade, fabrication & DIY calculators
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav>
+
+    <div class="container">
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="length.html">Length</a>
+
+            <a href="weight.html">Weight</a>
+
+            <a href="#">Steel & Metal</a>
+
+            <a href="#">Pressure</a>
+
+            <a href="#">Power</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+
+    <section class="welcome">
+
+        <h2>Weight Calculators</h2>
+
+        <p>
+            Convert common weight measurements between metric and imperial units.
+        </p>
+
+    </section>
+
+
+    <section class="calculator">
+
+        <h2>Kilograms ↔ Pounds</h2>
+
+        <label for="kilograms">
+            Kilograms:
+        </label>
+
+        <br>
+
+        <input
+            type="number"
+            id="kilograms"
+            placeholder="Enter kilograms"
+        >
+
+        <button onclick="convertToPounds()">
+            Convert to Pounds
+        </button>
+
+        <p id="poundsResult" class="result"></p>
+
+
+        <hr>
+
+
+        <label for="pounds">
+            Pounds:
+        </label>
+
+        <br>
+
+        <input
+            type="number"
+            id="pounds"
+            placeholder="Enter pounds"
+        >
+
+        <button onclick="convertToKilograms()">
+            Convert to Kilograms
+        </button>
+
+        <p id="kilogramsResult" class="result"></p>
+
+    </section>
+
+
+    <section class="calculator">
+
+        <h2>Coming Soon</h2>
+
+        <p>
+            Grams ↔ Ounces
+        </p>
+
+        <p>
+            Kilograms ↔ Ounces
+        </p>
+
+        <p>
+            Tonnes ↔ Pounds
+        </p>
+
+    </section>
+
+
+    <p>
+        <a href="index.html">← Back to TradeCalc</a>
+    </p>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 TradeCalc — Free calculators for trades and DIY.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

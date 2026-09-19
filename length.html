@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Length Converters - TradeCalc</title>
+
+    <meta
+        name="description"
+        content="Free length conversion calculators including millimetres, inches, metres and feet."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+        <div class="header-content">
+
+            <div class="logo">
+                Trade<span>Calc</span>
+            </div>
+
+            <div class="tagline">
+                Trade, fabrication & DIY calculators
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav>
+
+    <div class="container">
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="length.html">Length</a>
+
+            <a href="#">Weight</a>
+
+            <a href="#">Steel & Metal</a>
+
+            <a href="#">Pressure</a>
+
+            <a href="#">Power</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+
+    <section class="welcome">
+
+        <h2>Length Calculators</h2>
+
+        <p>
+            Convert measurements between metric and imperial units.
+        </p>
+
+    </section>
+
+
+    <section class="calculator">
+
+        <h2>Millimetres ↔ Inches</h2>
+
+
+        <label for="millimetres">
+            Millimetres:
+        </label>
+
+        <br>
+
+        <input
+            type="number"
+            id="millimetres"
+            placeholder="Enter millimetres"
+        >
+
+        <button onclick="convertToInches()">
+            Convert to Inches
+        </button>
+
+        <p id="inchResult" class="result"></p>
+
+
+        <hr>
+
+
+        <label for="inches">
+            Inches:
+        </label>
+
+        <br>
+
+        <input
+            type="number"
+            id="inches"
+            placeholder="Enter inches"
+        >
+
+        <button onclick="convertToMillimetres()">
+            Convert to Millimetres
+        </button>
+
+        <p id="millimetreResult" class="result"></p>
+
+    </section>
+
+
+<section class="calculator">
+
+    <h2>Metres ↔ Feet</h2>
+
+
+    <label for="metres">
+        Metres:
+    </label>
+
+    <br>
+
+    <input
+        type="number"
+        id="metres"
+        placeholder="Enter metres"
+    >
+
+    <button onclick="convertToFeet()">
+        Convert to Feet
+    </button>
+
+    <p id="feetResult" class="result"></p>
+
+
+    <hr>
+
+
+    <label for="feet">
+        Feet:
+    </label>
+
+    <br>
+
+    <input
+        type="number"
+        id="feet"
+        placeholder="Enter feet"
+    >
+
+    <button onclick="convertToMetres()">
+        Convert to Metres
+    </button>
+
+    <p id="metresResult" class="result"></p>
+
+</section>
+
+<section class="calculator">
+
+    <h2>Centimetres ↔ Inches</h2>
+
+
+    <label for="centimetres">
+        Centimetres:
+    </label>
+
+    <br>
+
+    <input
+        type="number"
+        id="centimetres"
+        placeholder="Enter centimetres"
+    >
+
+    <button onclick="convertToInchesFromCm()">
+        Convert to Inches
+    </button>
+
+    <p id="cmInchesResult" class="result"></p>
+
+
+    <hr>
+
+
+    <label for="cmInches">
+        Inches:
+    </label>
+
+    <br>
+
+    <input
+        type="number"
+        id="cmInches"
+        placeholder="Enter inches"
+    >
+
+    <button onclick="convertToCentimetres()">
+        Convert to Centimetres
+    </button>
+
+    <p id="centimetresResult" class="result"></p>
+
+</section>
+
+<section class="calculator">
+
+    <h2>Kilometres ↔ Miles</h2>
+
+
+    <label for="kilometres">
+        Kilometres:
+    </label>
+
+    <br>
+
+    <input
+        type="number"
+        id="kilometres"
+        placeholder="Enter kilometres"
+    >
+
+    <button onclick="convertToMiles()">
+        Convert to Miles
+    </button>
+
+    <p id="milesResult" class="result"></p>
+
+
+    <hr>
+
+
+    <label for="miles">
+        Miles:
+    </label>
+
+    <br>
+
+    <input
+        type="number"
+        id="miles"
+        placeholder="Enter miles"
+    >
+
+    <button onclick="convertToKilometres()">
+        Convert to Kilometres
+    </button>
+
+    <p id="kilometresResult" class="result"></p>
+
+</section>
+
+    <p>
+        <a href="index.html">← Back to TradeCalc</a>
+    </p>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 TradeCalc — Free calculators for trades and DIY.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
